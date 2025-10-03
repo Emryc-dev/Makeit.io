@@ -1,0 +1,80 @@
+.card{
+    position: absolute;
+    top: 40%;
+    width: 400px;
+    left: 40%;
+}
+
+/* Make the finisher animation cover the entire viewport */
+.finisher-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* canvas will be inserted inside this element and positioned absolutely */
+    overflow: hidden;
+}
+
+/* Ensure the injected canvas covers the container */
+#finisher-canvas{
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* Force page text to white for readability */
+/* Force page text to white for readability */
+body, body * {
+    color: #ffffff !important;
+}
+
+/* Override: make only the hero content text and icon black */
+.hero-content, .hero-content * {
+    color: #000000 !important;
+}
+.hero-content .icon-large{
+    color: #000000 !important;
+}
+
+/* Keep buttons visible: override to use brighter bootstrap primary if needed */
+.btn-primary{
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: #fff !important;
+}
+
+/* Slight spacing for header content to avoid overlap with full-screen canvas */
+.header{
+    position: relative;
+    z-index: 1;
+    padding: 60px 15px;
+}
+
+/* Large icon for the hero area */
+.icon-large{
+    font-size: 180px;
+    color: #ffffff;
+}
+
+/* Responsive tweaks: reduce icon size on small screens */
+@media (max-width: 767.98px){
+    .icon-large{
+        font-size: 110px;
+    }
+    .header{
+        padding: 40px 10px;
+    }
+}
+
+/* Ensure headings have good contrast and spacing */
+.header h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.header p{
+    font-size: 1.125rem;
+}
